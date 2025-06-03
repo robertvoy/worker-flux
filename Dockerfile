@@ -1,5 +1,5 @@
 # Replace <version> with the desired release version (e.g., 5.1.0)
-FROM runpod/worker-comfyui:5.1.0-base
+FROM runpod/worker-comfyui:5.1.0-flux1-dev
 
 # Install custom nodes using comfy-node-install
 # ComfyUI_essentials is available in the Comfy Registry
