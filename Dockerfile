@@ -1,6 +1,6 @@
 # Start from the Flux.1-dev base image
 # Replace <version> with the desired release version (e.g., 5.1.0)
-FROM runpod/worker-comfyui:5.1.0-flux1-dev
+FROM runpod/worker-comfyui:5.1.0-base
 
 # Install custom nodes using comfy-node-install
 # ComfyUI_essentials is available in the Comfy Registry
