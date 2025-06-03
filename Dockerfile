@@ -8,3 +8,8 @@ RUN comfy-node-install comfyui_essentials
 
 # ComfyUI-TeaCache needs to be installed via URL since it might not be in the registry
 RUN comfy-node-install https://github.com/welltop-cn/ComfyUI-TeaCache
+
+# Add style_models path to extra_model_paths.yaml after the unet line
+RUN if ! grep -q "style_models:" /comfyui/extra_model_paths.yaml; then \
+    sed -i '/  unet: models\/unet\//a\  style_models: models\/style_models\/' /comfyui/extra_model_paths.yaml; \
+    fi
